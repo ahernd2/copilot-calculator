@@ -1,0 +1,26 @@
+<table border="1">
+  <thead>
+    <th>Date</th>
+    <th>Accepted</th>
+    <th>Accepted with modifications</th>
+    <th>Did not accept</th>
+    <th>Solved a complicated algorithm</th>
+    <th>Time saved estimate</th>
+    <th>Time lost estimate</th>
+    <th>Approximate coding time (Hours)</th>
+    <th>Notes</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of (dates$ | async) | keyvalue">
+      <td>{{ item.key }}</td>
+      <td>{{ item.value.accepted }}</td>
+      <td>{{ item.value.acceptedModified }}</td>
+      <td>{{ item.value.rejected }}</td>
+      <td>{{ item.value.complicatedAlgorithm }}</td>
+      <td>{{ item.value.timeSavedEstimate }}</td>
+      <td>{{ item.value.timeLostEstimate }}</td>
+      <td>{{ item.value.codingHours }}</td>
+      <td>{{ item.value.notes }}</td>
+    </tr>
+  </tbody>
+</table>
