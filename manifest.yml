@@ -1,0 +1,7 @@
+applications:
+- name: copilot-calculator
+  instances: 1
+  memory: 30M
+  buildpack: dicf_staticfile_buildpack_latest
+  stack: cflinuxfs3
+  path: ./dist
